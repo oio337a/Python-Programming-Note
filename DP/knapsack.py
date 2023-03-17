@@ -17,7 +17,7 @@ knapsack = [[0 for _ in range((k + 1))] for _ in range(n + 1)]
 
 for _ in range(n):
 	w, v = map(int, input().split())
-	stuffs.append(w, v)
+	stuffs.append([w, v])
 
 # 냅색 문제 풀이
 for i in range(1, n + 1):
@@ -29,3 +29,5 @@ for i in range(1, n + 1):
 			knapsack[i][j] = knapsack[i - 1][j]
 		else:
 			knapsack[i][j] = max(value + knapsack[i - 1][j - weight], knapsack[i - 1][j])
+
+print(knapsack[n][k])
