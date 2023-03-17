@@ -13,7 +13,7 @@ dp table 을 만들고 점진적으로 물건을 선택했을 때 최댓값을 d
 
 n, k = map(int, input().split())
 stuffs = [[0, 0]]
-knapsack = [[0 for _ in range((k +_1))] for _ in range(n + 1)]
+knapsack = [[0 for _ in range((k + 1))] for _ in range(n + 1)]
 
 for _ in range(n):
 	w, v = map(int, input().split())
